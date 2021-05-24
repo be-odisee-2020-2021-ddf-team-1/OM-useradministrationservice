@@ -1,0 +1,21 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/om_user
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+
+jwt:
+
+  secret: Somerandomtext
+  expirationInMs: 5000
+server:
+  port: 8081
