@@ -1,21 +1,27 @@
 package be.OdiMentee.UserAdministrationMicroService.domain;
 
-public class UserDTO {
+import lombok.AllArgsConstructor;
 
-    private String username;
-    private String password;
+@AllArgsConstructor
+public class ProfielDTO {
 
     private String voornaam;
 
     private String achternaam;
 
-    private boolean isGeblokkeerd;
+    private Boolean isGeblokkeerd;
 
-    private boolean isMentor;
+    private Boolean isMentor;
 
-    private boolean isMentee;
+
+
+    private Boolean isMentee;
 
     private Long opleidingfase;
+
+    private String studierichting;
+
+
 
     public String getVoornaam() {
         return voornaam;
@@ -73,22 +79,7 @@ public class UserDTO {
         this.studierichting = studierichting;
     }
 
-    private String studierichting;
+    public ProfielDTO() {
 
-    public String getUsername() {
-        return username;
     }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
 }
