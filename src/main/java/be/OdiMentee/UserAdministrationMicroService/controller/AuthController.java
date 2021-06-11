@@ -54,6 +54,7 @@ public class AuthController {
 
     @RequestMapping(value = "/signup", method = RequestMethod.POST)
     public ResponseEntity<?> saveUser(@RequestBody UserDTO user) throws Exception {
+        System.out.println("user = " + user.getMentee()+" "+user.getMentor());
 
         User tebewaren  = new User(0,user.getUsername(), user.getPassword());
 
@@ -62,7 +63,7 @@ public class AuthController {
         if(response != null){
             final UserDetails userDetails = userDetailsService.loadUserByUsername(tebewaren.getUsername());
 
-            ProfielDTO profiel = new ProfielDTO(user.getVoornaam(),user.getAchternaam(),user.getGeblokkeerd(),user.getMentee(),user.getMentor(),user.getOpleidingfase(),user.getStudierichting());
+            ProfielDTO profiel = new ProfielDTO(user.getVoornaam(),user.getAchternaam(),user.getGeblokkeerd(),user.getMentee(),user.getMentor(),user.getOpleidingfase(),user.getStudierichting(),response.getUserId());
 
             RestTemplate restTemplate = new RestTemplate();
             var headers = new HttpHeaders(){{

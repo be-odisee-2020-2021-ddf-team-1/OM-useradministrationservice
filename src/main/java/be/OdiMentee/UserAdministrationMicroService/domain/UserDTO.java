@@ -1,5 +1,7 @@
 package be.OdiMentee.UserAdministrationMicroService.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class UserDTO {
 
     private String username;
@@ -8,11 +10,11 @@ public class UserDTO {
     private String voornaam;
 
     private String achternaam;
-
+    @JsonProperty
     private boolean isGeblokkeerd;
-
+@JsonProperty
     private boolean isMentor;
-
+    @JsonProperty
     private boolean isMentee;
 
     private Long opleidingfase;

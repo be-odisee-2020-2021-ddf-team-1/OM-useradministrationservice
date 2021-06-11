@@ -21,6 +21,15 @@ public class ProfielDTO {
 
     private String studierichting;
 
+    public long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
+
+    private long userId;
 
 
     public String getVoornaam() {
@@ -47,19 +56,19 @@ public class ProfielDTO {
         isGeblokkeerd = geblokkeerd;
     }
 
-    public Boolean getMentor() {
+    public Boolean getIsMentor() {
         return isMentor;
     }
 
-    public void setMentor(Boolean mentor) {
+    public void setIsMentor(Boolean mentor) {
         isMentor = mentor;
     }
 
-    public Boolean getMentee() {
+    public Boolean getIsMentee() {
         return isMentee;
     }
 
-    public void setMentee(Boolean mentee) {
+    public void setIsMentee(Boolean mentee) {
         isMentee = mentee;
     }
 
